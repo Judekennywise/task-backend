@@ -165,6 +165,87 @@ Ensure all environment variables required by the application  are set correctly.
 
 ---
 
+Here’s how you can update your **README.md** file to include clear instructions for running tests when using **Babel**, **TypeScript**, and **ts-jest**. 
+
+---
+
+## Running Tests
+
+1. **Dependencies Installed**: Run the following command to install project dependencies:
+   ```bash
+   npm install
+   ```
+
+---
+
+### Running Tests
+To run the tests in your project, follow these steps:
+
+#### 1. **Run All Tests**
+Run all test suites with the following command:
+```bash
+npm test
+```
+
+#### 2. **Run Tests in Watch Mode**
+To run tests in watch mode for continuous feedback while developing:
+```bash
+npm run test:watch
+```
+
+#### 3. **Run Tests with Coverage**
+To generate a test coverage report:
+```bash
+npm run test:coverage
+```
+The coverage report will be available in the `coverage` folder.
+
+---
+
+### Testing Tools and Configuration
+This project uses the following testing setup:
+- **Jest**: For running the tests.
+- **ts-jest**: A Jest preset to support TypeScript.
+- **Babel**: For compiling modern JavaScript and TypeScript during tests.
+
+#### Jest Configuration
+The Jest configuration is defined in the `jest.config.js` file. Below is a summary of the key settings:
+- **Preset**: `ts-jest` for TypeScript support.
+- **Transform**: Using Babel to compile TypeScript and JavaScript files.
+
+---
+
+### Troubleshooting
+If you encounter issues while running tests:
+1. Ensure all dependencies are installed:
+   ```bash
+   npm install
+   ```
+2. Check the `jest.config.js` file for any misconfiguration.
+3. Ensure `ts-jest` and `@babel/preset-typescript` are installed and correctly set up.
+
+---
+
+### Example Test Command Output
+When you run `npm test`, you should see output similar to the following:
+
+```plaintext
+  PASS  ./server.test.ts (45.147 s)
+  User Controller Tests
+    RegisterUser                                                                                                                    
+      √ should register a user and send an activation email (634 ms)
+      √ should return an error if the email already exists (184 ms)                                                                 
+    LoginUser
+      √ should log in a user with valid credentials (134 ms)                                                                        
+      √ should return an error for invalid credentials (88 ms)                                                                      
+
+Test Suites: 1 passed, 1 total
+Tests:       4 passed, 4 total
+Snapshots:   0 total
+Time:        46.454 s
+```
+
+---
 
 ### Available Scripts
 Here are the scripts available in the project:
