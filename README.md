@@ -50,21 +50,17 @@ Create a `.env` file in the root of your project and add the following keys:
 
 ```env
 PORT=8000
-DATABASE_NODE_ENV = 
-NODE_ENV = 
-MONGODB_TEST_URI = 
-MONGODB_DEVELOPMENT_URI = 
-
-
-ACTIVATION_SECRET = 
-SMPT_HOST = 
-SMPT_PORT = 
-SMPT_SERVICE = 
-SMPT_MAIL = 
-SMPT_PASSWORD = 
-RESET_PASSWORD_SECRET =
-ACCESS_TOKEN = 
-REFRESH_TOKEN = 
+DATABASE_NODE_ENV = development
+MONGODB_TEST_URI = your_mongodb_url
+MONGODB_DEVELOPMENT_URI =  your_mongodb_url
+ACTIVATION_SECRET = secretkey_to_activate_users
+SMPT_HOST = your_smtp_host
+SMPT_PORT = the_port_used_by_your_smpt
+SMPT_MAIL = your_smtp_mail
+SMPT_PASSWORD = your_smtp-password
+RESET_PASSWORD_SECRET = secretkey_to_reset_password
+ACCESS_TOKEN = jwt_secret
+REFRESH_TOKEN = jwt_secret
 ACCESS_TOKEN_EXPIRES = 20
 
 DEVELOPMENT_CLIENT_URL = "http://localhost:3000"
