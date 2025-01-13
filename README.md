@@ -65,6 +65,7 @@ ACCESS_TOKEN_EXPIRES = 20
 
 DEVELOPMENT_CLIENT_URL = "http://localhost:3000"
 DEVELOPMENT_URL = "http://localhost:8000"
+PAYSTACK_SECRET_KEY = your_paystack_secret_key
 ```
 
 Replace the values with your configuration.
